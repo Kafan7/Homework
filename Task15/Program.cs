@@ -8,7 +8,7 @@
 bool Weekend(int day)
 {
     bool result;
-    if (day == 6 ^ day == 7)
+    if (day == 6 || day == 7)
         result = true;
     else
         result = false;
