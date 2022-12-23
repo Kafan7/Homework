@@ -5,7 +5,7 @@
 782 -> 8
 918 -> 1*/
 
-Console.WriteLine("Введите трехзначное число: ");
+/*Console.WriteLine("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 if (number >= 100 && number <= 999)
@@ -15,8 +15,16 @@ if (number >= 100 && number <= 999)
 else
 {
     Console.WriteLine("Вы ввели не трёхзначное число");
+}*/
+
+int SecondDigit(int num)
+{
+    int result = num / 10 % 10;
+    return result;
 }
 
-
-
-
+Console.Write("Введите трехзначное число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int secondDigit = SecondDigit(number);
+if (number >= 100 && number <= 999) Console.WriteLine($"Вторая цифра в числе {number} равна {secondDigit}.");
+else Console.WriteLine("Вы ввели не трёхзначное число");
