@@ -15,7 +15,7 @@ bool Weekend(int day)
     
     return result;
 }
-Console.Write("Введите номер дня недели: ");
+Console.Write("Введите номер дня недели от 1 до 7: ");
 int dayNumber = Convert.ToInt32(Console.ReadLine());
 bool weekend = Weekend(dayNumber);
 if (weekend) Console.WriteLine($"Да, этот день {dayNumber} является выходным");
