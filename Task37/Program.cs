@@ -1,12 +1,12 @@
-﻿int[] CreatArray(int size, int min, int max)
+﻿int[] CreatArray(int size)
 {
-    int[] arr = new int[size];
+    int[] array = new int[size];
     Random rnd = new Random();
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        arr[i] = rnd.Next(min, max + 1);
+        array[i] = rnd.Next(-20, 10);
     }
-    return arr;
+    return array;
 }
 
 void PrintArray(int[] arr)
@@ -20,7 +20,7 @@ void PrintArray(int[] arr)
     Console.Write("]");
 }
 
-int CountElements(int[] arr)
+int[] CountElements(int[] arr)
 {
     int size = arr.Length / 2;
     if (arr.Length % 2 == 1) size += 1;
@@ -34,8 +34,15 @@ int CountElements(int[] arr)
     return newArr;
 }
 
-int[] array = CreatArray(11, -100, 100);
+int[] array = CreatArray(7);
 PrintArray(array);
-int countElements = CountElements(array);
+int[] newArray = CountElements(array);
+Console.WriteLine();
+PrintArray(newArray);
 
-Console.WriteLine(countElements);
+
+
+
+
+
+
